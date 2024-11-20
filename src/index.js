@@ -4,4 +4,8 @@ import { display } from "./display.js";
 
 const search = document.querySelector("#search");
 
-search.addEventListener("click", () => weather.getWeather());
+search.addEventListener("click", async () => {
+  await display.cityDisplay();
+  await display.conditionDisplay();
+  await display.tempDisplay();
+});
